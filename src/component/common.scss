@@ -1,0 +1,80 @@
+// @import url('https://fonts.googleapis.com/css2?family=Erica+One&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+// @font-face {
+//   font-family: "Morganite";
+//   src: local("Morganite"), url(../../../public/Morganite.ttf) format("truetype");
+// }
+
+// @font-face {
+//   font-family: "Morganite-light";
+//   src: local("Morganite-light"), url(../../../public/Morganite-Light.ttf) format("truetype");
+// }
+
+// @font-face {
+//   font-family: "Arial";
+//   src: local("Arial"), url(../../../public/Aileron-SemiBold.otf) format("truetype");
+// }
+
+$font-erica: 'Erica One', cursive;
+$font-worksans: 'Work Sans', sans-serif;
+$font-luckiest: 'Luckiest Guy', cursive;
+$font-fuzzy: 'Fuzzy Bubbles', cursive;
+$font-josefin: 'Josefin Sans', sans-serif;
+$font-rubik: 'Rubik', sans-serif;
+$font-montserrat: 'Montserrat', sans-serif;
+
+p {
+  margin: unset;
+}
+
+@mixin display-flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin display-flex-wrap-center {
+  @include display-flex-wrap();
+  align-content: center;
+  justify-content: center;
+}
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+      @media (max-width: 1440px) {
+          @content;
+      }
+  } @else if $point == laptop-medium {
+    @media (max-width: 1250px) {
+        @content;
+    }
+  } @else if $point == laptop {
+      @media (max-width: 1120px) {
+          @content;
+      }
+  } @else if $point == tablet-medium {
+    @media (max-width: 940px) {
+        @content;
+    }
+  } @else if $point == tablet {
+      @media (max-width: 900px) {
+          @content;
+      }
+  } @else if $point == phablet {
+      @media (max-width: 768px) {
+          @content;
+      }
+  } @else if $point == mobile {
+      @media (max-width: 500px) {
+          @content;
+      }
+  } @else {
+      @media ($point) {
+          @content;
+      }
+  }
+}
