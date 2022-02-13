@@ -1,24 +1,7 @@
-// @import url('https://fonts.googleapis.com/css2?family=Erica+One&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-// @font-face {
-//   font-family: "Morganite";
-//   src: local("Morganite"), url(../../../public/Morganite.ttf) format("truetype");
-// }
-
-// @font-face {
-//   font-family: "Morganite-light";
-//   src: local("Morganite-light"), url(../../../public/Morganite-Light.ttf) format("truetype");
-// }
-
-// @font-face {
-//   font-family: "Arial";
-//   src: local("Arial"), url(../../../public/Aileron-SemiBold.otf) format("truetype");
-// }
+@font-face {
+  font-family: "Morganite";
+  src: local("Morganite"), url(../fonts/Morganite.ttf) format("truetype");
+}
 
 $font-erica: 'Erica One', cursive;
 $font-worksans: 'Work Sans', sans-serif;
@@ -68,6 +51,10 @@ p {
       @media (max-width: 768px) {
           @content;
       }
+  } @else if $point == mobile-m {
+    @media (max-width: 570px) {
+        @content;
+    }
   } @else if $point == mobile {
       @media (max-width: 500px) {
           @content;
